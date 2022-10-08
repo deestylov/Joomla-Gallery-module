@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" method="upgrade">
+	<name>Галерея фото от Романа Дистайлова</name>
+	<author>Роман Дистайлов</author>
+	<creationDate>2022</creationDate>
+	<copyright>Copyright (C) 2022 Все права защищены.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>deestylov@ya.ru</authorEmail>
+	<authorUrl>ya.ru</authorUrl>
+	<version>1.0</version>
+	<description><![CDATA[
+<div style="margin-bottom:5px;">Автор: Роман Дистайлов</div>
+<div>Модуль позволяет выводит красивую галерею на вашем сайте. </div>
+	]]></description>
+
+<!--Перечисляем какие файлы необходимо установить-->
+	<files>
+	<filename module="mod_deestylov_gallery">mod_deestylov_gallery.php</filename>
+    <filename>mod_deestylov_gallery.xml</filename>
+    <filename>index.html</filename>
+    <filename>about.php</filename>
+	<filename>tmpl/default.php</filename>
+	<filename>tmpl/index.html</filename>
+    <folder>tmpl/</folder>
+	<folder>tmpl/lib/</folder>
+	</files>
+
+<!--Устанавливаем языковые файлы-->
+    <languages>
+    <language tag="ru-RU">language/ru-RU.mod_deestylov_gallery.ini</language>
+    </languages>
+
+<!--А это уже те самые параметры которые мы увидим в настройках модуля-->
+<config>
+<fields name="params">
+
+<fieldset name="basic">
+<field name="papkacarus" type="text" default="./images/" size="23" class="input-pixels text_area" label="Папка фотографий" description="Здесь необходимо указать папку, с которой будут грузиться все картинки. Картинки отображаются в алфавитном порядке. Названия картинок пишите только в латинских символах и цифрах"/>
+</fieldset>
+
+<!-- Описание модуля -->
+<fieldset name="dopol" label="О модуле" addfieldpath="/modules/mod_deestylov_gallery">
+<field type="about" name="about_us" />
+</fieldset>
+
+
+
+</fields>
+</config>
+
+</extension>
